@@ -6,12 +6,20 @@
   <title>TrainForge - Compliance Training Builder</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>.glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}.gradient-text{background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent}</style>
+  <style>
+    .glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}
+    .gradient-text{background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  </style>
 </head>
 <body class="bg-[#0a0a0f] min-h-screen text-white">
   <header class="glass sticky top-0">
-    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
-      <div class="flex items-center gap-4"><div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-red-600 flex items-center justify-center shadow-lg"><i class="fas fa-graduation-cap text-2xl"></i></div><div><h1 class="text-2xl font-bold gradient-text">TrainForge</h1><p class="text-xs text-slate-400">Training Builder</p></div></div>
+    <div class="max-w-7xl mx-auto px-8 py-5">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-red-600 flex items-center justify-center shadow-lg">
+          <i class="fas fa-graduation-cap text-2xl"></i>
+        </div>
+        <div><h1 class="text-2xl font-bold gradient-text">TrainForge</h1><p class="text-xs text-slate-400">Training Builder</p></div>
+      </div>
     </div>
   </header>
   <main class="max-w-7xl mx-auto px-8 py-10">
@@ -22,14 +30,25 @@
       <div class="glass rounded-2xl p-6"><p class="text-slate-400 text-sm mb-2">Pass Rate</p><p class="text-4xl font-bold text-red-400">94%</p></div>
     </div>
     <div class="grid lg:grid-cols-2 gap-8">
-      <div class="glass rounded-2xl p-8"><h2 class="text-xl font-bold mb-6"><i class="fas fa-magic text-amber-400 mr-3"></i>Generate Course</h2>
-        <div class="space-y-4"><input placeholder="Policy or topic..." class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder-slate-500"><select class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white"><option>Quiz Format</option><option>Video Script</option><option>Reading Material</option></select><button class="w-full py-4 bg-gradient-to-r from-amber-500 to-red-600 rounded-xl font-semibold"><i class="fas fa-wand-magic-sparkles mr-2"></i>Generate Module</button></div>
+      <div class="glass rounded-2xl p-8">
+        <h2 class="text-xl font-bold mb-6"><i class="fas fa-magic text-amber-400 mr-3"></i>Generate Course</h2>
+        <div class="space-y-4">
+          <input placeholder="Policy or topic..." class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder-slate-500">
+          <select class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white"><option>Quiz Format</option><option>Video Script</option></select>
+          <button class="w-full py-4 bg-gradient-to-r from-amber-500 to-red-600 rounded-xl font-semibold"><i class="fas fa-wand-magic-sparkles mr-2"></i>Generate Module</button>
+        </div>
       </div>
-      <div class="glass rounded-2xl p-8"><h2 class="text-xl font-bold mb-6"><i class="fas fa-trophy text-red-400 mr-3"></i>Top Learners</h2>
+      <div class="glass rounded-2xl p-8">
+        <h2 class="text-xl font-bold mb-6"><i class="fas fa-trophy text-red-400 mr-3"></i>Top Learners</h2>
         <div class="space-y-3">
-          {[{name:'Sarah M',score:98,course:'Data Security'},{name:'John D',score:95,course:'Privacy Policy'},{name:'Emily R',score:92,course:'Workplace Safety'}].map(l=>`
-          <div class="bg-white/5 rounded-xl p-4 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-red-500 flex items-center justify-center font-bold">${l.name.charAt(0)}</div><div><p class="font-semibold">${l.name}</p><p class="text-slate-400 text-sm">${l.course}</p></div></div><p class="text-2xl font-bold text-amber-400">${l.score}%</p></div>
-          `).join('')}
+          <div class="bg-white/5 rounded-xl p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-red-500 flex items-center justify-center font-bold">S</div><div><p class="font-semibold">Sarah M</p><p class="text-slate-400 text-sm">Data Security</p></div></div>
+            <p class="text-2xl font-bold text-amber-400">98%</p>
+          </div>
+          <div class="bg-white/5 rounded-xl p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-red-500 flex items-center justify-center font-bold">J</div><div><p class="font-semibold">John D</p><p class="text-slate-400 text-sm">Privacy Policy</p></div></div>
+            <p class="text-2xl font-bold text-amber-400">95%</p>
+          </div>
         </div>
       </div>
     </div>
